@@ -86,19 +86,38 @@ Running The Emulator (emu8086) Intro 8086 Microprocessor Emulator, also known as
 ## Subtraction   of 8 bit numbers  ALP 
  
 ## Output  
-## Multiplication alp 
+## Multiplication and Division 
+org 100h
+mov ax,[1000h]
+mov bx,[1002h]
+mul bx
+mov ax,[1000h]
+mov bx,[1002h]
+div bx
+ret
  ## Output  
 
 
-## Division alp 
-
-## Output  
-
-
 ## Result :
- 
+
+## AND , OR GATE 
+org 100h
+mov bx,1000h
+mov cx,1002h
+mov ax,[bx]
+mov dx,cx
+and ax,dx
+or ax,dx
+ret
 
 
+org 100h
+mov ax,1111h
+mov bx,0ffffh
+xor ax,bx
+not bx
+
+ret
 
 
 

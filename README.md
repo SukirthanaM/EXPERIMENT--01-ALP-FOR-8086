@@ -79,71 +79,52 @@ Running The Emulator (emu8086) Intro 8086 Microprocessor Emulator, also known as
 
 ## Programs for arithmetic  operations
 
-## Addition  and Subtraction
 ```
 org 100h
-mov ax,1018h
-mov bx,1009h
-add ax,bx     
-mov cx, 1105h
-mov dx, 1100h
-sub cx,dx
-ret
-```
-
-
-## Output  
-
-
-
-
-## Result :
-
-## Multiplication and Division 
-```
-org 100h
-mov ax,[1000h]
-mov bx,[1002h]
+mov ax, 8965h
+mov bx, 1123h
+add ax, bx
+mov [1000h], ax
+sub ax, bx
+mov [1002h], ax
 mul bx
-mov ax,[1000h]
-mov bx,[1002h]
+mov [1004h], ax
 div bx
+mov [1006], ax
+
 ret
 ```
- ## Output  
 
 
-## Result :
-
-## AND , OR GATE 
-```
-org 100h
-mov bx,1000h
-mov cx,1002h
-mov ax,[bx]
-mov dx,cx
-and ax,dx
-or ax,dx
-ret
-```
- ## Output  
-
-
-## Result :
-
-## XOR , NOT  GATE 
-```
-org 100h
-mov ax,1111h
-mov bx,0ffffh
-xor ax,bx
-not bx
-ret
-```
 ## Output  
+<img width="1625" height="653" alt="image" src="https://github.com/user-attachments/assets/883b40ea-04f3-4932-9009-df138fb0c60b" />
+
+
+
+## Programs for logical operations
+```
+org 100h
+
+MOV AX,5540h;
+AND BX,1121h;
+MOV [1000H],AX;
+MOV AX,0A642H;
+MOV BX,0B472H;
+OR AX,BX;
+MOV [1002H],AX;
+NOT AX;
+MOV [1004H],AX;
+XOR AX,BX;
+MOV [1006H],AX;
+
+ret
+```
+ ## Output  
+<img width="1577" height="659" alt="image" src="https://github.com/user-attachments/assets/3ab40b6e-2671-446d-b0e7-885e66d5c608" />
 
 
 ## Result :
+Thus, to write and execute ALP on fundamental arithmetic operations and Logical operations is successful.
 
 
 
